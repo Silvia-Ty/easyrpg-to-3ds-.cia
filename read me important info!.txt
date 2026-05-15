@@ -1,0 +1,47 @@
+prerequisites: python Version 11; brain
+
+you are in ./
+
+put your rpgmaker games to ./games Folder
+
+than
+
+create an /3ds Folder to your rpgmaker games Folder
+	like -> ./games/YourRPGMakerGame/3ds/
+
+in the new created 3ds Folder put in Audio.wav ; banner.png ; gameinfo.cfg ; icon.png
+
+exampels are found in ./assets/
+
+DON'T TOUCH THE ./assets/default FOLDER 
+without the useless stuff within 
+
+
+download easyrpg 3ds player debug .zip and put the .elf file into ./elf/
+
+important!
+
+Audio.wav + Banner.png = smaller than 256 KB (i think, not 100% sure)
+
+if it's any bigger it will not be shown on your homescreen!
+
+banner.png = 256 pixel x 128 pixel
+
+icon.png = 48 pixel x 48 pixel
+
+audio.wav needs to be 3sec or less (i also not 100% sure if true) 
+
+
+
+start
+	python.exe ./newbuild.py games
+
+help
+	python.exe ./newbuild.py -h
+
+verbose mode
+	python.exe ./newbuild.py -V games
+
+no rtp mode (although it seems to never has worked lmao)
+	python.exe ./newbuild.py games --no-rtp
+
